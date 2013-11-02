@@ -7,9 +7,11 @@ app.use(express.logger());
 
 app.get('/', function(request, response) {
 
-var indice = fs.readFileSync("index.html",'utf-8');
+var indice = fs.readFileSync("index.html");
+var buffer = new Buffer(indice);
+var index = indice.toString();
 //var buffer = new Buffer();
- response.send(indice);
+ response.send(index);
 });
 
 var port = process.env.PORT || 5000;
