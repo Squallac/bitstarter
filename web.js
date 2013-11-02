@@ -5,7 +5,7 @@ app.use(express.logger());
 	  
 
 app.get('/', function(request, response) {
-  response.send(rectificado);
+  response.send('Hola');
 });
 
 var port = process.env.PORT || 5000;
